@@ -1,6 +1,10 @@
 <h1>{{title}}</h1>
 <h2>{{astromech.name}} details!</h2>
+<h2>My Astromechs</h2>
+<ul class="astromechs">
+    <li *ngFor="let astromech of astromechs">
+        <span class="badge">{{astromech.id}}</span> {{astromech.name}}
+    </li>
+</ul>
 <div><label>id: </label>{{astromech.id}}</div>
 <div><label>name: </label><input [(ngModel)]="astromech.name" placeholder="name"></div>
-
-
